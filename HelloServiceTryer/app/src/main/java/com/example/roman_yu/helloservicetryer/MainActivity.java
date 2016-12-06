@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     private static final String BINDING = "Binding.";
     private static final String UNBINDING = "Unbinding.";
 
+    private static final String DISCONNECTED = "Disconnected.";
+
     boolean mIsBound;
     Messenger mService = null;
 
@@ -119,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
         public void onServiceDisconnected(ComponentName componentName) {
             mService = null;
 
-            mCallbackText.setText("Disconnected.");
+            mCallbackText.setText(DISCONNECTED);
         }
     };
 
