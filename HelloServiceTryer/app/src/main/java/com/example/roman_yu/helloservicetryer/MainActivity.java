@@ -22,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
     private static final String BINDING = "Binding.";
     private static final String UNBINDING = "Unbinding.";
 
+    private static final String DISCONNECTED = "Disconnected.";
+    private static final String RECEIVED_FROM_SERVICE = "Received from service: ";
+
     boolean mIsBound;
     Messenger mService = null;
 
@@ -84,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case MessengerService.MSG_SET_VALUE:
-                    mCallbackText.setText("Received from service: " + msg.arg1);
+                    mCallbackText.setText(RECEIVED_FROM_SERVICE + msg.arg1);
                     break;
                 default:
                     super.handleMessage(msg);
@@ -119,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
         public void onServiceDisconnected(ComponentName componentName) {
             mService = null;
 
-            mCallbackText.setText("Disconnected.");
+            mCallbackText.setText(DISCONNECTED);
         }
     };
 
