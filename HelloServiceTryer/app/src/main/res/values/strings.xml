@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HelloServiceTryer</string>
+    <string name="bind_service">Bind service</string>
+    <string name="ubbind_service">Unbind service</string>
+</resources>
