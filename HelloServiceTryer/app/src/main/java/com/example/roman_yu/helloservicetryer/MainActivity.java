@@ -20,6 +20,7 @@ import com.example.roman_yu.helloservicetryer.services.MessengerService;
 public class MainActivity extends AppCompatActivity {
 
     private static final String BINDING = "Binding.";
+    private static final String UNBINDING = "Unbinding.";
 
     boolean mIsBound;
     Messenger mService = null;
@@ -74,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
             // Detach our existing connection.
             unbindService(mServiceConnection);
             mIsBound = false;
-            mCallbackText.setText("Unbinding.");
+            mCallbackText.setText(UNBINDING);
         }
     }
 
