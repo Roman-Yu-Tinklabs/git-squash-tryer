@@ -13,7 +13,6 @@ import android.os.RemoteException;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.roman_yu.helloservicetryer.services.MessengerService;
@@ -30,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ((Button)findViewById(R.id.button)).setOnClickListener(mBindListener);
-        ((Button)findViewById(R.id.button2)).setOnClickListener(mUnbindListener);
+//        ((Button)findViewById(R.id.button)).setOnClickListener(mBindListener);
+//        ((Button)findViewById(R.id.button2)).setOnClickListener(mUnbindListener);
 
         mCallbackText = (TextView) findViewById(R.id.textView);
     }
