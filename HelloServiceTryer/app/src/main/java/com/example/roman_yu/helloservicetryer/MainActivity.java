@@ -19,6 +19,8 @@ import com.example.roman_yu.helloservicetryer.services.MessengerService;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String BINDING = "Binding.";
+
     boolean mIsBound;
     Messenger mService = null;
 
@@ -53,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         bindService(new Intent(this,
                 MessengerService.class), mServiceConnection, Context.BIND_AUTO_CREATE);
         mIsBound = true;
-        mCallbackText.setText("Binding.");
+        mCallbackText.setText(BINDING);
     }
 
     void doUnbindService() {
